@@ -1,16 +1,11 @@
 def read_file():
     f = open('msg.sec', 'r')
-    text = f.readline().rstrip()
-
-    characters = ["'", ",", ".", " ", "!", "?", "/"]
-
-    for i in characters:
-        text = text.replace(i, '')
+    text = f.read().rstrip()
 
     return text[:60].lower()
 
 def rot(letter, key):
-    return chr(ord('a') + ((ord(letter) - ord('a')) - key)%26)
+    return chr(ord('a') + ((ord(letter) - ord('a')) - key)%26) if letter.isalpha() else letter
 
 def decrypt_text(text):
     new_text = ''

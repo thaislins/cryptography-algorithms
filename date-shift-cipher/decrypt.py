@@ -13,7 +13,7 @@ def format_date(date):
     return new_date
 
 def rot(letter, shift_value):
-    return chr(ord('a') + ((ord(letter) - ord('a')) - shift_value)%26)
+    return chr(ord('a') + ((ord(letter) - ord('a')) - shift_value)%26) if letter.isalpha() else letter
 
 def decrypt_text(text,date):
     date_str = date * math.floor((len(text)/len(date))) + date[:len(text)%len(date)]
