@@ -1,5 +1,5 @@
-def read_file():
-    f = open('msg.sec', 'r')
+def read_file(f_name):
+    f = open(f_name, 'r')
     text = f.read().rstrip()
 
     return text[:60].lower()
@@ -19,7 +19,7 @@ def decrypt_text(text):
 
 
 def run():
-    text = read_file()
+    text = read_file('msg.sec')
     decrypt_text(text)
 
 run()
