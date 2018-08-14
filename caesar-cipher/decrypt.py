@@ -20,6 +20,6 @@ def decrypt_text(text):
 
 def run():
     text = read_file('msg.sec')
-    decrypt_text(text)
+    decrypt_text(text) #answer == 17 (despacito)
 
 run()

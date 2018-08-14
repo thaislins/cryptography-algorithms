@@ -31,12 +31,12 @@ def write_file(text):
     file.close() 
 
 def run():
-    if len(sys.argv) == 4:
+    if len(sys.argv) == 4 and len(sys.argv[1]) == 8:
         date = format_date(sys.argv[1])
         text = read_file(sys.argv[2])
         encrypt_text(text,date)
     else :
-        print('Missing Arguments!')
+        print('Missing Arguments or Wrong Input!')
 
 run()
 
